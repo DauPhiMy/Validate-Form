@@ -7,10 +7,10 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkError([userName, email, password, confirmPassword]);
-  checkEmail(email)
   checkLength(userName,3,5)
   checkLength(password,3,5)
   checkPassword(password,confirmPassword)
+  checkEmail(email)
 });
 
 function showError(input, message) {
