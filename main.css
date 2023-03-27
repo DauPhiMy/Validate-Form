@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --success : #9b408f;
+  --error: #adadad;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--success);
+}
+
+.form {
+  background: #fff;
+  width: 300px;
+  padding: 40px;
+  border-radius: 10px;
+  border: none;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.form-control {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form-control input {
+  height: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--error);
+  font-size: 1.8rem;
+}
+
+.form-control.error span{
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  color: red;
+  font-size: 1.4rem;
+}
+
+.form-control .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--success);
+  transition: 0.4s;
+}
+
+.form-control input:focus ~ .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--success);
+}
+
+.btn-login {
+  width: 100%;
+  background-color: var(--success);
+  border: none;
+  height: 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-bottom {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-bottom a {
+  text-decoration: none;
+}
+
+.text-bottom a:hover {
+  text-decoration: underline;
+}
